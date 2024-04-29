@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <head/>
+<body>
+<h1>hello word!!!</h1>
+<p>this is a html page</p>
+<form action="/user" method="get">
+    <input value="get" type="submit">
+</form>
+<form action="/user" method="post">
+    <input value="post" type="submit">
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="PUT">
+    <input value="put" type="submit">
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="DELETE">
+    <input value="delete" type="submit">
+</form>
+
+<a href="/car/34/owe/jdassi">@PathVariable获取请求路径上的变量</a>
+<a href="/car/34/owe/jdassi?age=18&ines=jk&ines=pl">@PathVariable获取请求路径上的变量</a>
+</body>
+</html>

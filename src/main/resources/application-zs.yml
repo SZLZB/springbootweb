@@ -1,0 +1,43 @@
+spring:
+#  mvc:
+#    #静态资源加前缀
+#    #static-path-pattern: /res/**
+#    hiddenmethod:
+#      filter:
+#        enabled: true
+  datasource:
+    url: jdbc:firebirdsql://192.168.0.232/E:/AVERP_DB/HP02.FDB
+    username: SYSDBA
+    password: SmIle00
+    driver-class-name: org.firebirdsql.jdbc.FBDriver
+    druid:
+      filters: stat
+      stat-view-servlet:  #开启监控页面
+        enabled: true
+        login-username: sz
+        login-password: 123
+        resetEnable: false
+
+      web-stat-filter: #开启web应用
+       enabled: true
+       url-pattern: /*
+       exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+
+      filter:
+       stat:
+         slow-sql-millis: 1000 #慢查询 大于1000毫秒算是
+         log-slow-sql: true #记录慢查询
+         enabled: true
+      aop-patterns: com.bootweb.*  #监控某个包下面的spring
+  data:
+    jdbc:
+      repositories:
+        enabled: false
+  jpa:
+    database-platform: org.hibernate.dialect.FirebirdDialect
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+
+
+

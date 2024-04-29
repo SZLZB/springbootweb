@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件传输单个或者多个文件</title>
+</head>
+<body>
+   <form action="fielscwj.do" method="post" enctype="multipart/form-data">
+     <div>
+       <label>邮箱</label>
+       <input type="email" name="email">
+     </div>
+       <div>
+           <label>名字</label>
+           <input type="text" name="usename">
+       </div>
+       <div>
+           <label>图片</label>
+           <input type="file" name="hearimage">
+       </div>
+       <div>
+           <label>生活照</label>
+           <input type="file" name="photos" multiple>
+       </div>
+       <button type="submit">提交</button>
+   </form>
+
+</body>
+</html>
