@@ -29,7 +29,7 @@ public class Adminconfig implements WebMvcConfigurer {
                 .excludePathPatterns("/sql.do")
                 .excludePathPatterns("/zg.do")
                 .excludePathPatterns("/msg.do")
-                .excludePathPatterns("/git-Csgit.do");
+                .excludePathPatterns("/git-Cst.do");
     }
 
 
